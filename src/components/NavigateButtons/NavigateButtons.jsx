@@ -1,6 +1,9 @@
 import React from "react";
 import { Button } from "@material-tailwind/react";
 import clothes from "../../assets/images/clothes.jpg";
+import { filterProducts } from "../../store/slices/productsSlice";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const NavigateButtons = () => {
   const buttons = [
@@ -13,21 +16,31 @@ const NavigateButtons = () => {
     "Jackets",
     "Bags",
   ];
+
+  const dispatch = useDispatch();
+
+  const filterHandler = (arg) => {
+    dispatch(filterProducts(arg));
+  };
+
   return (
     <div>
       <div className="flex items-center justify-center py-8">
         {buttons.map((button, index) => {
           return (
             <div key={index} className="mr-4">
-              <Button
-                color="gray"
-                variant="outlined"
-                size="lg"
-                ripple={true}
-                className="text-black hover:bg-gray-300 duration-300 ease-in-out border-gray-500 border py-2 px-4 rounded-md"
-              >
-                {button.toUpperCase()}
-              </Button>
+              <Link to={"/filteredProducts/" + button}>
+                <Button
+                  color="gray"
+                  variant="outlined"
+                  size="lg"
+                  ripple={true}
+                  className="text-black hover:bg-gray-300 duration-300 ease-in-out"
+                  onClick={() => filterHandler(button)}
+                >
+                  {button}
+                </Button>
+              </Link>
             </div>
           );
         })}
