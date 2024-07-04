@@ -11,6 +11,8 @@ import {
       Typography,
       Button,
     } from "@material-tailwind/react";
+import SingleProduct from "./components/FilteredProducts/SingleProduct";
+
 function App() {
   return (
     <div className="app">
@@ -21,6 +23,7 @@ function App() {
             path="/filteredProducts/:type"
             element={<FilteredProducts></FilteredProducts>}
           ></Route>
+          <Route path="/filteredProducts/:type/:id" element={<SingleProduct></SingleProduct>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
