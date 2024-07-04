@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { singleProduct } from "../../store/slices/productsSlice";
 import { useParams } from "react-router-dom";
 import { Tooltip, Button } from "@material-tailwind/react";
+import { addToCart } from "../../store/slices/cartSlice";
 
 const SingleProduct = () => {
   const product = useSelector((state) => state.products.singleProduct);
   const { id } = useParams();
+  const dispatch = useDispatch();
 
   const productSize = product[0].size ? product[0].size[0] : "";
   const productColor = product[0].color[0];
@@ -18,17 +20,32 @@ const SingleProduct = () => {
   const sizeChangeHandler = (e) => {
     setSize(e.target.value);
   };
+
   const colorChangeHandler = (e) => {
     setColor(e.target.value);
   };
 
+  const addToCartHandler = (item) => {
+    dispatch(
+      addToCart({
+        id: item.id,
+        name: item.name,
+        size: size,
+        color: color,
+        price: item.price,
+        amount: 1,
+        total: item.price,
+      })
+    );
+  };
+
   return (
-    <div>
+    <div className="mx-auto">
       {product
         .filter((prod) => prod.id === id)
         .map((item, index) => (
           <div key={index} className="flex justify-center items-center py-10">
-            <div className="pl-44 grow-[2]">
+            <div className=" grow-[2]">
               <img
                 src={item.img}
                 alt={item.name}
@@ -117,7 +134,13 @@ const SingleProduct = () => {
                     </select>
                   </div>
                   <Tooltip content="Add to Cart" placement="bottom">
-                    <Button color="gray" size="lg" variant="outlined" ripple>
+                    <Button
+                      color="gray"
+                      size="lg"
+                      variant="outlined"
+                      ripple={true}
+                      onClick={() => addToCartHandler(item)}
+                    >
                       Add to Cart
                     </Button>
                   </Tooltip>
