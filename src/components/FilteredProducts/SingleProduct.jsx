@@ -30,6 +30,8 @@ const SingleProduct = () => {
       addToCart({
         id: item.id,
         name: item.name,
+        img: item.img,
+        text: item.text,
         size: size,
         color: color,
         price: item.price,
