@@ -49,8 +49,8 @@ const FilteredProducts = () => {
             <h1 className="text-4xl font-inter text-gray-600 dark:text-white font-bold tracking-normal leading-none">
               {type}
             </h1>
-            <div className="flex items-center justify-between py-8">
-              <div className="flex items-center ">
+            <div className="flex items-center justify-between py-8 sm:justify-normal sm:gap-y-2">
+              <div className="flex items-center sm:flex-wrap sm:gap-y-2 ">
                 {genderButtons.map((item, index) => (
                   <div key={index}>
                     <Button
@@ -75,15 +75,6 @@ const FilteredProducts = () => {
                 >
                   Price: High
                 </Button>
-                {/* <Button
-                color="gray"
-                size="lg"
-                variant="outlined"
-                ripple={true}
-                className="text-black hover:bg-gra30` duration-300 ease-in-out mr-4"
-              >
-                Price: Low
-              </Button> */}
                 <Menu>
                   <MenuHandler>
                     <Button
@@ -132,8 +123,18 @@ const FilteredProducts = () => {
                     ))}
                   </MenuList>
                 </Menu>
+                <Button
+                  color="gray"
+                  size="lg"
+                  variant="outlined"
+                  ripple={true}
+                  className="text-black dark:text-white dark:border-white dark:hover:bg-gray-700 hover:bg-gray-300 duration-300 ease-in-out mr-4 hidden sm:inline-block"
+                  onClick={() => dispatch(filterProducts(type))}
+                >
+                  Clear Filter
+                </Button>
               </div>
-              <div className="pr-14">
+              <div className="pr-14 sm:hidden">
                 <Button
                   color="gray"
                   size="lg"
@@ -150,7 +151,7 @@ const FilteredProducts = () => {
           {error ? (
             <Error></Error>
           ) : (
-            <div className="grid grid-cols-4 justify-items-center py-8 gap-12">
+            <div className="grid grid-cols-4 sm:grid-cols-1 justify-items-center py-8 gap-12">
               {products
                 .filter((product) => product.type === type)
                 .map((product, index) => (

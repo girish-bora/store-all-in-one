@@ -49,12 +49,12 @@ const SingleProduct = () => {
         {product
           .filter((prod) => prod.id === id)
           .map((item, index) => (
-            <div key={index} className="flex justify-center items-center py-10">
+            <div key={index} className="flex sm:flex-col justify-center items-center py-10">
               <div className=" grow-[2]">
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="h-[850px] rounded-lg"
+                  className="h-[850px] sm:h-[400px] sm:mb-4 rounded-lg"
                 />
               </div>
               <div className="grow-[3] pl-4">

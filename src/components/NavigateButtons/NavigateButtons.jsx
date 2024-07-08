@@ -27,7 +27,7 @@ const NavigateButtons = () => {
 
   return (
     <div className="dark:bg-gray-900">
-      <div className="flex items-center justify-center py-8 dark:bg-gray-900">
+      <div className="flex items-center justify-center py-8 sm:py-4 dark:bg-gray-900 sm:flex-wrap sm:gap-y-2">
         {buttons.map((button, index) => {
           return (
             <div key={index} className="mr-4">
@@ -54,7 +54,7 @@ const NavigateButtons = () => {
       </div>
       <div className="flex justify-center items-center py-4 dark:bg-gray-900">
         <img
-          className="h-[600px] w-[70%] rounded-md shadow-lg shadow-gray-600"
+          className="h-[600px] w-[70%] sm:h-[350px] xs:h-[300px] sm:w-[85%] rounded-md shadow-lg shadow-gray-600"
           src={clothes}
           alt="clothes"
         />

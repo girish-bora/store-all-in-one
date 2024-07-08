@@ -12,7 +12,7 @@ const ProductSection = () => {
           Summer T-Shirt SALE 30% OFF
         </h2>
       </div>
-      <div className="grid grid-cols-3 justify-items-center py-8 gap-4 mx-auto max-w-7xl">
+      <div className="grid grid-cols-3 justify-items-center py-8 gap-4 mx-auto max-w-7xl sm:grid-cols-1">
         {storeData.slice(0, 6).map((product, index) => (
           <div key={index}>
             <ProductSectionItem

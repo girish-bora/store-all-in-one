@@ -26,6 +26,7 @@ const Cart = ({ openModal, setOpen }) => {
 
   const placeOrderHandler = () => {
     setMessage(true);
+    setOpen(false);
     setTimeout(() => setMessage(false), 5000);
     dispatch(placeOrder());
   };
@@ -46,12 +47,14 @@ const Cart = ({ openModal, setOpen }) => {
         (cart.length > 0 ? (
           <>
             <Dialog
-              open={open}
+              size="xl"
+              open={openModal}
               handler={() => setOpen(false)}
               animate={{
                 mount: { scale: 1, y: 0 },
                 unmount: { scale: 0.9, y: -100 },
               }}
+              className="h-[500px] overflow-scroll"
             >
               <DialogHeader>Shopping Bag</DialogHeader>
               <DialogBody
@@ -59,7 +62,7 @@ const Cart = ({ openModal, setOpen }) => {
                 className="flex flex-col justify-center items-start"
               >
                 {cart.map((item, index) => (
-                  <div key={index}>
+                  <div key={index} className="mx-auto">
                     <div className="grid grid-cols-2 py-4">
                       <div>
                         <img
@@ -144,7 +147,7 @@ const Cart = ({ openModal, setOpen }) => {
           <>
             <Dialog
               className="border-0 outline-0"
-              open={open}
+              open={openModal}
               handler={() => setOpen(false)}
               animate={{
                 mount: { scale: 1, y: 0 },

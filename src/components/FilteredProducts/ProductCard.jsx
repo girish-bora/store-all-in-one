@@ -23,7 +23,7 @@ const ProductCard = ({ id, name, price, text, colors, img }) => {
   return (
     <Link to={`/filteredProducts/${type}/` + id}>
       <Card
-        className="mt-6 w-92 dark:bg-gray-800"
+        className="mt-6 w-92 xs:w-[85%] sm:w-[70%] sm:mx-auto  dark:bg-gray-800"
         onClick={() => singleProductHandler(id)}
       >
         <CardHeader color="blue" className="relative h-96">
