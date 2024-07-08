@@ -37,7 +37,7 @@ const Cart = ({ openModal, setOpen }) => {
       {message && (
         <Alert
           color="red"
-          className="text-xl font-inter font-bold absolute top-1 w-full left-1 flex justify-center"
+          className="text-xl font-inter font-bold absolute top-1 w-full left-1 flex justify-center z-10"
         >
           <p>Order Placed. Your order will be shipped soon.</p>
         </Alert>
