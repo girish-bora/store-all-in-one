@@ -43,7 +43,7 @@ export const cartSlice = createSlice({
             totalAmount: state.totalAmount,
             totalPrice: state.totalPrice,
           });
-          sessionStorage.setItem("cart",saveState);
+          sessionStorage.setItem("cart", saveState);
         }
       } catch (err) {
         return err;
@@ -78,7 +78,22 @@ export const cartSlice = createSlice({
           totalAmount: state.totalAmount,
           totalPrice: state.totalPrice,
         });
-        sessionStorage.setItem("cart",saveState);
+        sessionStorage.setItem("cart", saveState);
+      } catch (err) {
+        return err;
+      }
+    },
+    placeOrder(state, action) {
+      try {
+        state.cart = [];
+        state.totalAmount = 0;
+        state.totalPrice = 0;
+        const saveState = JSON.stringify({
+          cart: state.cart,
+          totalAmount: state.totalAmount,
+          totalPrice: state.totalPrice,
+        });
+        sessionStorage.setItem("cart", saveState);
       } catch (err) {
         return err;
       }
@@ -86,6 +101,6 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, placeOrder } = cartSlice.actions;
 
 export default cartSlice.reducer;

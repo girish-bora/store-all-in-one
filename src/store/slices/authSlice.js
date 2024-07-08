@@ -14,10 +14,10 @@ export const authSlice = createSlice({
     login(state, action) {
       const user = action.payload;
       const userValidation = /^[A-Za-z]{4,10}$/i.test(user.name);
-      const passwordValidation = true
-        // /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(
-        //   user.password
-        // );
+      const passwordValidation = true;
+      // /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(
+      //   user.password
+      // );
       state.user = user;
       if (!userValidation || !passwordValidation) {
         state.user.authUser = false;

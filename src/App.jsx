@@ -10,8 +10,10 @@ function App() {
   const user = useSelector((state) => state.user.user);
   const { authUser } = user;
 
+  const darkMode = useSelector((state) => state.theme.darkMode);
+
   return (
-    <div className="app">
+    <div className={`app ${darkMode ? "dark" : ""}`}>
       <BrowserRouter>
         <Routes>
           <Route

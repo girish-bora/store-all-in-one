@@ -22,18 +22,23 @@ const ProductCard = ({ id, name, price, text, colors, img }) => {
 
   return (
     <Link to={`/filteredProducts/${type}/` + id}>
-      <Card className="mt-6 w-92" onClick={() => singleProductHandler(id)}>
+      <Card
+        className="mt-6 w-92 dark:bg-gray-800"
+        onClick={() => singleProductHandler(id)}
+      >
         <CardHeader color="blue" className="relative h-96">
           <img src={img} alt="card-image" className="h-full w-full" />
         </CardHeader>
         <CardBody>
-          <Typography variant="h5" className="mb-2">
+          <Typography variant="h5" className="dark:text-white mb-2">
             {name}
           </Typography>
           <Typography>{text}</Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
-          <Typography variant="small">${price}</Typography>
+          <Typography variant="small" className="dark:text-white">
+            ${price}
+          </Typography>
           <Typography variant="small" color="gray" className="flex gap-1">
             {colors.map((color, index) => (
               <i

@@ -20,7 +20,21 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative pb-4">
+    <div className="relative pb-4 dark:bg-gray-900">
+      <div className="bg-black p-4 w-full flex  justify-around">
+        <div className="text-white font-inter text-base font-medium tracking-normal leading-none text-center ">
+          {" "}
+          50% OFF
+        </div>
+        <div className="text-white font-inter text-base font-medium tracking-normal leading-none text-center ">
+          {" "}
+          Free Shipping And Returns
+        </div>
+        <div className="text-white font-inter text-base font-medium tracking-normal leading-none text-center ">
+          {" "}
+          Different Payment Methods
+        </div>
+      </div>
       <div>
         {sliderData.map((item) => (
           <div

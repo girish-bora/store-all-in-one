@@ -70,7 +70,11 @@ const Login = () => {
           />
         </CardBody>
         <CardFooter className="pt-0">
-          <Button variant="gradient" fullWidth onClick={() => loginHandler(values)}>
+          <Button
+            variant="gradient"
+            fullWidth
+            onClick={() => loginHandler(values)}
+          >
             Sign In
           </Button>
           <Typography variant="small" className="mt-6 flex justify-center">

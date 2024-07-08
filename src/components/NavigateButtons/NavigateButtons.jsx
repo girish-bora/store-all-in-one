@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@material-tailwind/react";
 import clothes from "../../assets/images/clothes.jpg";
 import { filterProducts } from "../../store/slices/productsSlice";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 const NavigateButtons = () => {
@@ -17,6 +17,8 @@ const NavigateButtons = () => {
     "Bags",
   ];
 
+  const darkMode = useSelector((state) => state.theme.darkMode);
+
   const dispatch = useDispatch();
 
   const filterHandler = (arg) => {
@@ -24,8 +26,8 @@ const NavigateButtons = () => {
   };
 
   return (
-    <div>
-      <div className="flex items-center justify-center py-8">
+    <div className="dark:bg-gray-900">
+      <div className="flex items-center justify-center py-8 dark:bg-gray-900">
         {buttons.map((button, index) => {
           return (
             <div key={index} className="mr-4">
@@ -35,7 +37,7 @@ const NavigateButtons = () => {
                   variant="outlined"
                   size="lg"
                   ripple={true}
-                  className="text-black hover:bg-gray-300 duration-300 ease-in-out"
+                  className="text-black hover:bg-gray-300 duration-300 ease-in-out dark:text-white dark:border-white dark:hover:bg-gray-800"
                   onClick={() => filterHandler(button)}
                 >
                   {button}
@@ -50,7 +52,7 @@ const NavigateButtons = () => {
           SALES UPTO 50%
         </h3>
       </div>
-      <div className="flex justify-center items-center py-4">
+      <div className="flex justify-center items-center py-4 dark:bg-gray-900">
         <img
           className="h-[600px] w-[70%] rounded-md shadow-lg shadow-gray-600"
           src={clothes}
