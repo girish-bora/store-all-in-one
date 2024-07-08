@@ -2,9 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const cartSlice = createSlice({
   name: "cart",
-  initialState: {
+  initialState: JSON.parse(sessionStorage.getItem("cart")) || {
     cart: [],
-    amount: 0,
     totalAmount: 0,
     totalPrice: 0,
   },
@@ -38,6 +37,13 @@ export const cartSlice = createSlice({
           });
           state.totalAmount++;
           state.totalPrice += product.price;
+
+          const saveState = JSON.stringify({
+            cart: state.cart,
+            totalAmount: state.totalAmount,
+            totalPrice: state.totalPrice,
+          });
+          sessionStorage.setItem("cart",saveState);
         }
       } catch (err) {
         return err;
@@ -67,6 +73,12 @@ export const cartSlice = createSlice({
           state.totalAmount--;
           state.totalPrice -= product.price;
         }
+        const saveState = JSON.stringify({
+          cart: state.cart,
+          totalAmount: state.totalAmount,
+          totalPrice: state.totalPrice,
+        });
+        sessionStorage.setItem("cart",saveState);
       } catch (err) {
         return err;
       }

@@ -44,10 +44,10 @@ const ProductSectionItem = ({
             {text}
           </Typography>
           <div className="flex justify-center gap-7 pt-2">
-            <Typography color="gray" className="font-medium" textGradient>
+            <Typography color="gray" className="font-medium text-gray-800" textGradient>
               Size left: {defaultSize}
             </Typography>
-            <Typography color="gray" className="font-medium" textGradient>
+            <Typography color="gray" className="font-medium text-gray-800" textGradient>
               Color:{" "}
               <span
                 className="px-2 rounded-full ml-2"

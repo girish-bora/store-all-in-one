@@ -86,9 +86,9 @@ const Cart = ({ openModal, setOpen }) => {
                         <Tooltip content="Remove from Cart" placement="bottom">
                           <Button
                             onClick={() => removeFromCartHandler(item)}
-                            size="small"
+                            size="sm"
                             color="red"
-                            ripple="true"
+                            ripple={true}
                             variant="filled"
                           >
                             Remove
