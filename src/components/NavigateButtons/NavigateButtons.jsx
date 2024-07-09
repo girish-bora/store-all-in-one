@@ -27,7 +27,7 @@ const NavigateButtons = () => {
 
   return (
     <div className="dark:bg-gray-900">
-      <div className="flex items-center justify-center py-8 sm:py-4 dark:bg-gray-900 sm:flex-wrap sm:gap-y-2">
+      <div className="flex items-center justify-center py-8 sm:py-4 dark:bg-gray-900 md:flex-wrap sm:flex-wrap sm:gap-y-2">
         {buttons.map((button, index) => {
           return (
             <div key={index} className="mr-4">

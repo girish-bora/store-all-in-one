@@ -47,7 +47,7 @@ const Slider = () => {
           >
             <div>
               {parseInt(item.id) === slideIndex && (
-                <img className="h-[850px] w-full sm:h-[400px]" src={item.img} alt="shoes" />
+                <img className="h-[850px] w-full sm:h-[400px] md:h-[600px]" src={item.img} alt="shoes" />
               )}
             </div>
             <div className="absolute top-44 sm:top-4 mx-auto inset-x-1/4">

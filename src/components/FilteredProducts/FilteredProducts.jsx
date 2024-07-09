@@ -151,7 +151,7 @@ const FilteredProducts = () => {
           {error ? (
             <Error></Error>
           ) : (
-            <div className="grid grid-cols-4 sm:grid-cols-1 justify-items-center py-8 gap-12">
+            <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-1 justify-items-center py-8 gap-12">
               {products
                 .filter((product) => product.type === type)
                 .map((product, index) => (
