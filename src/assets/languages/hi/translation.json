@@ -1,0 +1,21 @@
+{
+  "navbar": {
+    "wishlist": "WishList",
+    "shoppingBag": "Shopping Bag",
+    "greeting": "Hi",
+    "mode": "Dark"
+  },
+  "slider": {
+    "topBar": {
+      "discount": "50% OFF",
+      "shipping": "Free Shipping And Returns",
+      "payment": "Different Payment Methods"
+    },
+    "body": {
+      "item1": "Summers SALE up to 50% OFF what are you wating for",
+      "item2": "AUTUMN is coming, choose what suits you THE BEST",
+      "item3": "Make your feet as comfortable as walking on the beach",
+      "item4": "Choose between basketball and fashion or choose both"
+    }
+  }
+}
