@@ -40,6 +40,10 @@ const Navbar = () => {
 
   return (
     <>
+      <div className="bg-black p-4 w-full flex  justify-around">
+        <button className="text-white font-inter text-base font-medium tracking-normal leading-none text-center">English</button>
+        <button className="text-white font-inter text-base font-medium tracking-normal leading-none text-center">Hindi</button>
+      </div>
       <div className="flex justify-around sm:justify-between items-center bg-blue-gray-300 dark:bg-blue-gray-900">
         <Link to="/">
           <div className="sm:pl-4">
@@ -160,25 +164,25 @@ const Navbar = () => {
           </div>
         </div>
         <div className="sm:flex flex-row items-center cursor-pointer pr-4 hidden">
-            {!false && (
-              <button onClick={toggleMenu}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-10"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              </button>
-            )}
-          </div>
+          {!false && (
+            <button onClick={toggleMenu}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-10"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
       <div className="sm:flex flex-row items-center cursor-pointer pr-4 hidden">
         {isMenuOpen && (
