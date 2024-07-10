@@ -121,7 +121,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["L", "XL"],
     color: ["brown", "gray", "yellow"],
-    gender: "female",
+    gender: "male",
     price: 75,
   },
   {

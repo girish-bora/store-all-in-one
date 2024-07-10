@@ -54,12 +54,21 @@ const Cart = ({ openModal, setOpen }) => {
                 mount: { scale: 1, y: 0 },
                 unmount: { scale: 0.9, y: -100 },
               }}
-              className="h-[500px] overflow-scroll"
+              className="max-h-[500px] overflow-scroll"
             >
-              <DialogHeader>Shopping Bag</DialogHeader>
+              <DialogHeader
+                className={darkMode ? "bg-gray-900 text-white" : ""}
+              >
+                Shopping Bag
+              </DialogHeader>
               <DialogBody
                 divider
-                className="flex flex-col justify-center items-start"
+                className={
+                  darkMode
+                    ? "bg-gray-800 flex flex-col justify-center items-start"
+                    : "flex flex-col justify-center items-start"
+                }
+                //className="flex flex-col justify-center items-start"
               >
                 {cart.map((item, index) => (
                   <div key={index} className="mx-auto">
@@ -76,17 +85,38 @@ const Cart = ({ openModal, setOpen }) => {
                           </h4>
                         </div>
                         <div className="max-w-xs">
-                          <p className="text-black text-xs font-inter tracking-normal leading-none pt-2">
+                          <p
+                            className={
+                              darkMode
+                                ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
+                                : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                            }
+                            //className="text-black text-xs font-inter tracking-normal leading-none pt-2"
+                          >
                             {item.text}
                           </p>
                         </div>
                       </div>
                       <div>
-                        <p className="text-black text-sm font-inter tracking-normal leading-none pt-2">
+                        <p
+                          className={
+                            darkMode
+                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                          }
+                          //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
+                        >
                           Selected size:{" "}
                           <span className="ml-2">{item.size}</span>
                         </p>
-                        <p className="text-black text-sm font-inter tracking-normal leading-none pt-2">
+                        <p
+                          className={
+                            darkMode
+                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                          }
+                          //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
+                        >
                           Selected color:{" "}
                           <span
                             className="ml-2 rounded-full px-2"
@@ -95,14 +125,35 @@ const Cart = ({ openModal, setOpen }) => {
                             }}
                           ></span>
                         </p>
-                        <p className="text-black text-sm font-inter tracking-normal leading-none pt-2">
+                        <p
+                          className={
+                            darkMode
+                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                          }
+                          //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
+                        >
                           Amount: <span className="ml-2">{item.amount}</span>
                         </p>
-                        <p className="text-black text-sm font-inter tracking-normal leading-none pt-2">
+                        <p
+                          className={
+                            darkMode
+                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                          }
+                          //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
+                        >
                           Single Item Price:{" "}
                           <span className="ml-2">${item.price}</span>
                         </p>
-                        <p className="text-black text-sm font-inter tracking-normal leading-none pt-2">
+                        <p
+                          className={
+                            darkMode
+                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                          }
+                          //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
+                        >
                           Total Price:{" "}
                           <span className="ml-2">${item.totalPrice}</span>
                         </p>
@@ -127,8 +178,21 @@ const Cart = ({ openModal, setOpen }) => {
                   </div>
                 ))}
               </DialogBody>
-              <DialogFooter className="flex justify-between items-center">
-                <p className="text-black text-base font-inter tracking-normal leading-none pt-2">
+              <DialogFooter
+                className={
+                  darkMode
+                    ? "bg-gray-900 flex justify-between items-center"
+                    : "flex justify-between items-center"
+                }
+              >
+                <p
+                  className={
+                    darkMode
+                      ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
+                      : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                  }
+                  //className="text-black text-base font-inter tracking-normal leading-none pt-2"
+                >
                   Cart Total: <span className="ml-2">${totalPrice}</span>
                 </p>
                 <Button
