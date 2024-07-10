@@ -10,8 +10,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { Tooltip } from "@material-tailwind/react";
 import { removeFromCart, placeOrder } from "../../store/slices/cartSlice";
+import { useTranslation } from "react-i18next";
 
 const Cart = ({ openModal, setOpen }) => {
+  const { t } = useTranslation();
+
   const cart = useSelector((state) => state.cart.cart);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   //const totalAmount = useSelector((state) => state.cart.totalAmount);
@@ -40,7 +43,7 @@ const Cart = ({ openModal, setOpen }) => {
           color="red"
           className="text-xl font-inter font-bold absolute top-1 w-full left-1 flex justify-center z-10"
         >
-          <p>Order Placed. Your order will be shipped soon.</p>
+          <p>{t("cart.alert")}</p>
         </Alert>
       )}
       {!message &&
@@ -57,9 +60,13 @@ const Cart = ({ openModal, setOpen }) => {
               className="max-h-[500px] overflow-scroll"
             >
               <DialogHeader
-                className={darkMode ? "bg-gray-900 text-white" : ""}
+                className={
+                  darkMode
+                    ? "bg-gray-900 text-white text-3xl font-bold"
+                    : "text-3xl font-bold"
+                }
               >
-                Shopping Bag
+                {t("cart.filled.head")}
               </DialogHeader>
               <DialogBody
                 divider
@@ -80,8 +87,14 @@ const Cart = ({ openModal, setOpen }) => {
                           alt={item.name}
                         />
                         <div className="flex flex-col items-start">
-                          <h4 className="text-black text-base font-inter font-bold tracking-normal leading-none pt-2">
-                            {item.name}
+                          <h4
+                            className={
+                              darkMode
+                                ? "text-white text-xl font-bold font-inter tracking-normal leading-none pt-2"
+                                : "text-black text-xl font-bold font-inter tracking-normal leading-none pt-2"
+                            }
+                          >
+                            {t(`data.storeData.${item.id}.name`)}
                           </h4>
                         </div>
                         <div className="max-w-xs">
@@ -93,7 +106,7 @@ const Cart = ({ openModal, setOpen }) => {
                             }
                             //className="text-black text-xs font-inter tracking-normal leading-none pt-2"
                           >
-                            {item.text}
+                            {t(`data.storeData.${item.id}.text`)}
                           </p>
                         </div>
                       </div>
@@ -101,23 +114,23 @@ const Cart = ({ openModal, setOpen }) => {
                         <p
                           className={
                             darkMode
-                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
-                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                              ? "text-white text-sm font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-sm font-inter tracking-normal leading-none pt-2"
                           }
                           //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
                         >
-                          Selected size:{" "}
+                          {t("cart.filled.body.item0")}{" "}
                           <span className="ml-2">{item.size}</span>
                         </p>
                         <p
                           className={
                             darkMode
-                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
-                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                              ? "text-white text-sm font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-sm font-inter tracking-normal leading-none pt-2"
                           }
                           //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
                         >
-                          Selected color:{" "}
+                          {t("cart.filled.body.item1")}{" "}
                           <span
                             className="ml-2 rounded-full px-2"
                             style={{
@@ -128,33 +141,34 @@ const Cart = ({ openModal, setOpen }) => {
                         <p
                           className={
                             darkMode
-                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
-                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                              ? "text-white text-sm font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-sm font-inter tracking-normal leading-none pt-2"
                           }
                           //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
                         >
-                          Amount: <span className="ml-2">{item.amount}</span>
+                          {t("cart.filled.body.item2")}{" "}
+                          <span className="ml-2">{item.amount}</span>
                         </p>
                         <p
                           className={
                             darkMode
-                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
-                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                              ? "text-white text-sm font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-sm font-inter tracking-normal leading-none pt-2"
                           }
                           //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
                         >
-                          Single Item Price:{" "}
+                          {t("cart.filled.body.item3")}{" "}
                           <span className="ml-2">${item.price}</span>
                         </p>
                         <p
                           className={
                             darkMode
-                              ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
-                              : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                              ? "text-white text-sm font-inter tracking-normal leading-none pt-2"
+                              : "text-black text-sm font-inter tracking-normal leading-none pt-2"
                           }
                           //className="text-black text-sm font-inter tracking-normal leading-none pt-2"
                         >
-                          Total Price:{" "}
+                          {t("cart.filled.body.item4")}{" "}
                           <span className="ml-2">${item.totalPrice}</span>
                         </p>
                         <div className="pt-4">
@@ -168,8 +182,9 @@ const Cart = ({ openModal, setOpen }) => {
                               color="red"
                               ripple={true}
                               variant="filled"
+                              className="text-sm font-bold"
                             >
-                              Remove
+                              {t("cart.filled.body.button")}
                             </Button>
                           </Tooltip>
                         </div>
@@ -188,12 +203,13 @@ const Cart = ({ openModal, setOpen }) => {
                 <p
                   className={
                     darkMode
-                      ? "text-white text-xs font-inter tracking-normal leading-none pt-2"
-                      : "text-black text-xs font-inter tracking-normal leading-none pt-2"
+                      ? "text-white text-md font-bold font-inter tracking-normal leading-none pt-2"
+                      : "text-black text-md font-bold font-inter tracking-normal leading-none pt-2"
                   }
                   //className="text-black text-base font-inter tracking-normal leading-none pt-2"
                 >
-                  Cart Total: <span className="ml-2">${totalPrice}</span>
+                  {t("cart.filled.foot.total")}{" "}
+                  <span className="ml-2">${totalPrice}</span>
                 </p>
                 <Button
                   size="md"
@@ -201,8 +217,9 @@ const Cart = ({ openModal, setOpen }) => {
                   ripple={true}
                   variant="filled"
                   onClick={placeOrderHandler}
+                  className="text-md font-bold"
                 >
-                  Place Order
+                  {t("cart.filled.foot.button")}
                 </Button>
               </DialogFooter>
             </Dialog>
@@ -218,14 +235,49 @@ const Cart = ({ openModal, setOpen }) => {
                 unmount: { scale: 0.9, y: -100 },
               }}
             >
-              <DialogHeader>Shopping Bag</DialogHeader>
-              <DialogBody divider>
+              <DialogHeader
+                className={
+                  darkMode
+                    ? "bg-gray-900 flex flex-col justify-center items-start"
+                    : "flex flex-col justify-center items-start"
+                }
+              >
+                <p
+                  className={
+                    darkMode
+                      ? "text-white text-3xl font-bold font-inter tracking-normal leading-none pt-2"
+                      : "text-black text-3xl font-bold font-inter tracking-normal leading-none pt-2"
+                  }
+                >
+                  {t("cart.empty.head")}
+                </p>
+              </DialogHeader>
+              <DialogBody
+                divider
+                className={
+                  darkMode
+                    ? "bg-gray-800 flex flex-col justify-center items-start"
+                    : "flex flex-col justify-center items-start"
+                }
+              >
                 <div>
-                  <h1 className="text-black text-3xl font-inter font-bold tracking-normal leading-none py-4">
-                    Your bag is empty
+                  <h1
+                    className={
+                      darkMode
+                        ? "text-white text-3xl font-bold font-inter tracking-normal leading-none pt-2"
+                        : "text-black text-3xl font-bold font-inter tracking-normal leading-none pt-2"
+                    }
+                  >
+                    {t("cart.empty.body")}
                   </h1>
-                  <p className="text-black text-base font-inter tracking-normal leading-none">
-                    Add some products
+                  <p
+                    className={
+                      darkMode
+                        ? "text-white text-base font-inter tracking-normal leading-none pt-2"
+                        : "text-black text-base font-inter tracking-normal leading-none pt-2"
+                    }
+                  >
+                    {t("cart.empty.foot")}
                   </p>
                 </div>
               </DialogBody>

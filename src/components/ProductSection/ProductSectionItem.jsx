@@ -10,6 +10,7 @@ import {
 } from "@material-tailwind/react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../store/slices/cartSlice";
+import { useTranslation } from "react-i18next";
 
 const ProductSectionItem = ({
   id,
@@ -21,6 +22,8 @@ const ProductSectionItem = ({
   color,
   totalPrice,
 }) => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
 
   const darkMode = useSelector((state) => state.theme.darkMode);
@@ -44,10 +47,10 @@ const ProductSectionItem = ({
             color="blue-gray"
             className="mb-2 dark:text-white"
           >
-            {name}
+            {t("data.storeData." + id + ".name")}
           </Typography>
           <Typography color="gray" className="font-medium" textGradient>
-            {text}
+            {t("data.storeData." + id + ".text")}
           </Typography>
           <div className="flex justify-center gap-7 pt-2">
             <Typography
@@ -55,14 +58,14 @@ const ProductSectionItem = ({
               className="font-medium text-gray-800 dark:text-white"
               textGradient
             >
-              Size left: {defaultSize}
+              {t("navigateButtons.size")}: {defaultSize}
             </Typography>
             <Typography
               color="gray"
               className="font-medium text-gray-800 dark:text-white"
               textGradient
             >
-              Color:{" "}
+              {t("navigateButtons.color")}:{" "}
               <span
                 className="px-2 rounded-full ml-2"
                 style={{ backgroundColor: defaultColor }}
@@ -71,7 +74,7 @@ const ProductSectionItem = ({
           </div>
         </CardBody>
         <CardFooter className="flex justify-center gap-7 pt- dark:bg-gray-800">
-          <Tooltip content="Add to Cart" placement="bottom">
+          <Tooltip content={t("navigateButtons.button")} placement="bottom">
             <Button
               size="lg"
               color="gray"
@@ -92,7 +95,7 @@ const ProductSectionItem = ({
                 })
               }
             >
-              Add to Cart
+              {t("navigateButtons.button")}
             </Button>
           </Tooltip>
         </CardFooter>

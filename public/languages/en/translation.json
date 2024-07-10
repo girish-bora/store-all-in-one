@@ -1,0 +1,803 @@
+{
+  "navbar": {
+    "wishlist": "WishList",
+    "shoppingBag": "Shopping Bag",
+    "greeting": "Hi,",
+    "darkMode": "Dark",
+    "lightMode": "Light",
+    "language": {
+      "en": "English",
+      "hi": "Hindi"
+    },
+    "signOut": "Sign Out"
+  },
+  "slider": {
+    "topBar": {
+      "discount": "50% OFF",
+      "shipping": "Free Shipping And Returns",
+      "payment": "Different Payment Methods"
+    },
+    "body": {
+      "item0": "Summers SALE up to 50% OFF what are you wating for",
+      "item1": "AUTUMN is coming, choose what suits you THE BEST",
+      "item2": "Make your feet as comfortable as walking on the beach",
+      "item3": "Choose between basketball and fashion or choose both"
+    }
+  },
+  "navigateButtons": {
+    "buttons": {
+      "button0": "Hoodies",
+      "button1": "Dresses",
+      "button2": "Suits",
+      "button3": "Shoes",
+      "button4": "T-Shirts",
+      "button5": "Jeans",
+      "button6": "Jackets",
+      "button7": "Bags"
+    },
+    "sale1": "SALES UPTO 50%",
+    "button": "Add to Cart",
+    "sale2": "Summer T-Shirt SALE 30% OFF",
+    "size": "Size left",
+    "color": "Color"
+  },
+  "filteredProducts": {
+    "type": {
+      "Hoodies": "Hoodies",
+      "Dresses": "Dresses",
+      "Suits": "Suits",
+      "Shoes": "Shoes",
+      "T-Shirts": "T-Shirts",
+      "Jeans": "Jeans",
+      "Jackets": "Jackets",
+      "Bags": "Bags"
+    },
+    "filterButtons": {
+      "button0": "Male",
+      "button1": "Female",
+      "button2": "Price: High",
+      "button3": {
+        "text": "Select Color",
+        "color0": "Black",
+        "color1": "Brown",
+        "color2": "Red",
+        "color3": "Blue",
+        "color4": "Green",
+        "color5": "Purple",
+        "color6": "Yellow",
+        "color7": "Orange"
+      },
+      "button4": {
+        "text": "Select Size",
+        "size0": "S",
+        "size1": "M",
+        "size2": "L",
+        "size3": "XL"
+      },
+      "button5": "Clear Filter"
+    }
+  },
+  "singleProduct": {
+    "sale": "15% OFF",
+    "body": {
+      "size": "Pick a size",
+      "color": "Pick a color"
+    },
+    "button": "Add to Cart"
+  },
+  "cart": {
+    "empty": {
+      "head": "Shopping Bag",
+      "body": "Your bag is empty",
+      "foot": "Add some products"
+    },
+    "filled": {
+      "head": "Shopping Bagshjh",
+      "body": {
+        "item1": "Selected size:",
+        "item2": "Selected color:",
+        "item3": "Amount:",
+        "item4": "Single item price:",
+        "item5": "Total price:",
+        "button": "Remove"
+      },
+      "foot": {
+        "total": "Cart Total:",
+        "button": "Place Order"
+      }
+    },
+    "alert": "Order Placed. Your order will be shipped soon."
+  },
+  "footer": {
+    "copy": "Copyright © 2024 page by iniT."
+  },
+  "data": {
+    "storeData": {
+      "1": {
+        "name": "Casual T-Shirt 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "black",
+          "color1": "gray",
+          "color2": "green"
+        },
+        "gender": "male"
+      },
+      "2": {
+        "name": "Casual T-Shirt 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "black",
+          "color1": "red",
+          "color2": "brown"
+        },
+        "gender": "male"
+      },
+      "3": {
+        "name": "Casual T-Shirt 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "brown",
+          "color1": "gray",
+          "color2": "yellow"
+        },
+        "gender": "male"
+      },
+      "4": {
+        "name": "Casual T-Shirt 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "gray",
+          "color1": "orange",
+          "color2": "blue"
+        },
+        "gender": "female"
+      },
+      "5": {
+        "name": "Casual T-Shirt 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "black",
+          "color1": "brown",
+          "color2": "blue"
+        },
+        "gender": "female"
+      },
+      "6": {
+        "name": "Casual T-Shirt 6",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "gray",
+          "color1": "purple",
+          "color2": "yellow"
+        },
+        "gender": "female"
+      },
+      "7": {
+        "name": "Casual T-Shirt 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "black",
+          "color1": "orange",
+          "color2": "blue"
+        },
+        "gender": "male"
+      },
+      "8": {
+        "name": "Casual T-Shirt 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "T-Shirts",
+        "color": {
+          "color0": "gray",
+          "color1": "red",
+          "color2": "blue"
+        },
+        "gender": "male"
+      },
+      "9": {
+        "name": "Casual Hoodie 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "blue",
+          "color1": "red",
+          "color2": "green"
+        },
+        "gender": "female"
+      },
+      "10": {
+        "name": "Casual Hoodie 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "gray",
+          "color1": "purple",
+          "color2": "black"
+        },
+        "gender": "female"
+      },
+      "11": {
+        "name": "Casual Hoodie 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "red",
+          "color1": "blue",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "12": {
+        "name": "Casual Hoodie 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "gray",
+          "color1": "blue",
+          "color2": "red"
+        },
+        "gender": "male"
+      },
+      "13": {
+        "name": "Casual Hoodie 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "gray",
+          "color1": "blue",
+          "color2": "red"
+        },
+        "gender": "female"
+      },
+      "14": {
+        "name": "Casual Hoodie 6",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "gray",
+          "color1": "yellow",
+          "color2": "blue"
+        },
+        "gender": "male"
+      },
+      "15": {
+        "name": "Casual Hoodie 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "black",
+          "color1": "blue"
+        },
+        "gender": "male"
+      },
+      "16": {
+        "name": "Casual Hoodie 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Hoodies",
+        "color": {
+          "color0": "green",
+          "color1": "yellow",
+          "color2": "red"
+        },
+        "gender": "female"
+      },
+      "17": {
+        "name": "Casual Shoes 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "black",
+          "color1": "gray"
+        },
+        "gender": "male"
+      },
+      "18": {
+        "name": "Casual Shoes 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "brown",
+          "color1": "gray"
+        },
+        "gender": "female"
+      },
+      "19": {
+        "name": "Casual Shoes 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "black",
+          "color1": "gray",
+          "color2": "blue"
+        },
+        "gender": "female"
+      },
+      "20": {
+        "name": "Casual Shoes 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "black",
+          "color1": "gray"
+        },
+        "gender": "male"
+      },
+      "21": {
+        "name": "Casual Shoes 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "purple",
+          "color1": "gray",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "22": {
+        "name": "Casual Shoes 6",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "purple",
+          "color1": "gray",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "23": {
+        "name": "Casual Shoes 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "purple",
+          "color1": "green",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "24": {
+        "name": "Casual Shoes 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Shoes",
+        "color": {
+          "color0": "purple",
+          "color1": "green",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "25": {
+        "name": "Casual Dress 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "purple",
+          "color1": "blue",
+          "color2": "gray"
+        },
+        "gender": "female"
+      },
+      "26": {
+        "name": "Casual Dress 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "black",
+          "color1": "gray",
+          "color2": "green"
+        },
+        "gender": "female"
+      },
+      "27": {
+        "name": "Casual Dress 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "purple",
+          "color1": "blue",
+          "color2": "red"
+        },
+        "gender": "female"
+      },
+      "28": {
+        "name": "Casual Dress 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "yellow",
+          "color1": "blue",
+          "color2": "orange"
+        },
+        "gender": "female"
+      },
+      "29": {
+        "name": "Casual Dress 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "yellow",
+          "color1": "orange"
+        },
+        "gender": "female"
+      },
+      "30": {
+        "name": "Casual Dress 6",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "yellow",
+          "color1": "blue",
+          "color2": "black"
+        },
+        "gender": "female"
+      },
+      "31": {
+        "name": "Casual Dress 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "orange",
+          "color1": "blue",
+          "color2": "black"
+        },
+        "gender": "female"
+      },
+      "32": {
+        "name": "Casual Dress 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Dresses",
+        "color": {
+          "color0": "brown",
+          "color1": "blue",
+          "color2": "red"
+        },
+        "gender": "female"
+      },
+      "33": {
+        "name": "Casual Jeans 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "male"
+      },
+      "34": {
+        "name": "Casual Jeans 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "female"
+      },
+      "35": {
+        "name": "Casual Jeans 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "male"
+      },
+      "36": {
+        "name": "Casual Jeans 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "female"
+      },
+      "37": {
+        "name": "Casual Jeans 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "female"
+      },
+      "64": {
+        "name": "Casual Jeans 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "male"
+      },
+      "38": {
+        "name": "Casual Jeans 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "male"
+      },
+      "39": {
+        "name": "Casual Jeans 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jeans",
+        "color": {
+          "color0": "blue",
+          "color1": "black"
+        },
+        "gender": "male"
+      },
+      "40": {
+        "name": "Casual Jacket 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "black",
+          "color1": "blue"
+        },
+        "gender": "male"
+      },
+      "41": {
+        "name": "Casual Jacket 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "gray",
+          "color1": "brown"
+        },
+        "gender": "male"
+      },
+      "42": {
+        "name": "Casual Jacket 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "gray",
+          "color1": "brown"
+        },
+        "gender": "male"
+      },
+      "43": {
+        "name": "Casual Jacket 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "gray",
+          "color1": "brown"
+        },
+        "gender": "male"
+      },
+      "44": {
+        "name": "Casual Jacket 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "gray",
+          "color1": "brown"
+        },
+        "gender": "female"
+      },
+      "45": {
+        "name": "Casual Jacket 6",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "gray",
+          "color1": "brown",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "46": {
+        "name": "Casual Jacket 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "brown",
+          "color1": "black"
+        },
+        "gender": "female"
+      },
+      "47": {
+        "name": "Casual Jacket 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Jackets",
+        "color": {
+          "color0": "yellow",
+          "color1": "orange",
+          "color2": "blue"
+        },
+        "gender": "female"
+      },
+      "48": {
+        "name": "Casual Bag 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "black",
+          "color1": "blue",
+          "color2": "red"
+        },
+        "gender": "female"
+      },
+      "49": {
+        "name": "Casual Bag 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "green",
+          "color1": "red",
+          "color2": "blue"
+        },
+        "gender": "male"
+      },
+      "50": {
+        "name": "Casual Bag 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "brown",
+          "color1": "blue",
+          "color2": "orange"
+        },
+        "gender": "female"
+      },
+      "51": {
+        "name": "Casual Bag 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "brown",
+          "color1": "blue",
+          "color2": "orange"
+        },
+        "gender": "female"
+      },
+      "52": {
+        "name": "Casual Bag 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "yellow",
+          "color1": "blue",
+          "color2": "black"
+        },
+        "gender": "female"
+      },
+      "53": {
+        "name": "Casual Bag 6",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "blue",
+          "color1": "black",
+          "color2": "orange"
+        },
+        "gender": "female"
+      },
+      "54": {
+        "name": "Casual Bag 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "blue",
+          "color1": "black",
+          "color2": "orange"
+        },
+        "gender": "female"
+      },
+      "55": {
+        "name": "Casual Bag 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Bags",
+        "color": {
+          "color0": "blue",
+          "color1": "green",
+          "color2": "red"
+        },
+        "gender": "female"
+      },
+      "56": {
+        "name": "Casual Suit 1",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "black",
+          "color1": "gray",
+          "color2": "orange"
+        },
+        "gender": "male"
+      },
+      "57": {
+        "name": "Casual Suit 2",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "purple",
+          "color1": "orange",
+          "color2": "gray"
+        },
+        "gender": "male"
+      },
+      "58": {
+        "name": "Casual Suit 3",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "purple",
+          "color1": "orange",
+          "color2": "gray"
+        },
+        "gender": "male"
+      },
+      "59": {
+        "name": "Casual Suit 4",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "brown",
+          "color1": "orange",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "60": {
+        "name": "Casual Suit 5",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "black",
+          "color1": "blue",
+          "color2": "red"
+        },
+        "gender": "male"
+      },
+      "61": {
+        "name": "Casual Suit 6",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "brown",
+          "color1": "orange",
+          "color2": "black"
+        },
+        "gender": "female"
+      },
+      "62": {
+        "name": "Casual Suit 7",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "red",
+          "color1": "blue",
+          "color2": "black"
+        },
+        "gender": "male"
+      },
+      "63": {
+        "name": "Casual Suit 8",
+        "text": "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        "type": "Suits",
+        "color": {
+          "color0": "blue",
+          "color1": "green",
+          "color2": "brown"
+        },
+        "gender": "male"
+      }
+    }
+  }
+}

@@ -4,8 +4,11 @@ import clothes from "../../assets/images/clothes.jpg";
 import { filterProducts } from "../../store/slices/productsSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const NavigateButtons = () => {
+  const { t } = useTranslation();
+
   const buttons = [
     "Hoodies",
     "Dresses",
@@ -40,7 +43,7 @@ const NavigateButtons = () => {
                   className="text-black hover:bg-gray-300 duration-300 ease-in-out dark:text-white dark:border-white dark:hover:bg-gray-800"
                   onClick={() => filterHandler(button)}
                 >
-                  {button}
+                  {t("navigateButtons.buttons.button" + index)}
                 </Button>
               </Link>
             </div>
@@ -49,7 +52,7 @@ const NavigateButtons = () => {
       </div>
       <div className="bg-green-300 p-2 w-[55%] mx-auto rounded-md">
         <h3 className="text-orange-900 text-center text-lg font-inter font-bold tracking-normal leading-none">
-          SALES UPTO 50%
+          {t("navigateButtons.sale1")}
         </h3>
       </div>
       <div className="flex justify-center items-center py-4 dark:bg-gray-900">

@@ -5,8 +5,11 @@ import { useParams } from "react-router-dom";
 import { Tooltip, Button } from "@material-tailwind/react";
 import { addToCart } from "../../store/slices/cartSlice";
 import Navbar from "../Navbar/Navbar";
+import { useTranslation } from "react-i18next";
 
 const SingleProduct = () => {
+  const { t } = useTranslation();
+
   const product = useSelector((state) => state.products.singleProduct);
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -49,7 +52,7 @@ const SingleProduct = () => {
         {product
           .filter((prod) => prod.id === id)
           .map((item, index) => (
-            <div key={index} className="flex sm:flex-col md:flex-col justify-center items-center py-10">
+            <div key={index} className="flex sm:flex-col justify-center items-center py-10">
               <div className=" grow-[2]">
                 <img
                   src={item.img}
@@ -60,13 +63,13 @@ const SingleProduct = () => {
               <div className="grow-[3] pl-4">
                 <div className="max-w-lg">
                   <h5 className="dark:text-white text-2xl font-inter font-bold tracking-normal leading-none pb-4">
-                    {item.name}
+                    {t("data.storeData." + id + ".name")}
                   </h5>
                   <p className="text-orange-700 text-xl font-bold font-inter tracking-normal leading-none pb-4">
-                    15% OFF
+                    {t("singleProduct.sale")}
                   </p>
                   <p className="text-gray-600 text-xl font-bold font-inter tracking-normal leading-none pb-4">
-                    {item.text}
+                    {t(`data.storeData.${id}.text`)}
                   </p>
                   <div className="pb-4">
                     {item.size ? (
@@ -75,7 +78,7 @@ const SingleProduct = () => {
                           htmlFor="size"
                           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
-                          Pick a size
+                          {t("singleProduct.body.size")}
                         </label>
                         <select
                           name="size"
@@ -97,7 +100,7 @@ const SingleProduct = () => {
                           htmlFor="size"
                           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
-                          Pick a size
+                          {t("singleProduct.body.size")}
                         </label>
                         <select
                           name="size"
@@ -122,7 +125,7 @@ const SingleProduct = () => {
                         htmlFor="color"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
-                        Pick a color
+                        {t("singleProduct.body.color")}
                       </label>
                       <select
                         name="color"
@@ -133,12 +136,15 @@ const SingleProduct = () => {
                       >
                         {item.color.map((col, index) => (
                           <option value={col} key={index}>
-                            {col}
+                            {t(`data.storeData.${id}.color.color${index}`)}
                           </option>
                         ))}
                       </select>
                     </div>
-                    <Tooltip content="Add to Cart" placement="bottom">
+                    <Tooltip
+                      content={t("singleProduct.button")}
+                      placement="bottom"
+                    >
                       <Button
                         color="gray"
                         size="lg"
@@ -147,7 +153,7 @@ const SingleProduct = () => {
                         className="dark:text-white dark:border-white"
                         onClick={() => addToCartHandler(item)}
                       >
-                        Add to Cart
+                        {t("singleProduct.button")}
                       </Button>
                     </Tooltip>
                   </div>

@@ -18,8 +18,11 @@ import {
   filterBySize,
 } from "../../store/slices/productsSlice";
 import Navbar from "../Navbar/Navbar";
+import { useTranslation } from "react-i18next";
 
 const FilteredProducts = () => {
+  const { t } = useTranslation();
+
   const products = useSelector((state) => state.products.filteredProducts);
   const { type } = useParams();
 
@@ -47,7 +50,7 @@ const FilteredProducts = () => {
         <div className="pt-16">
           <div className="pl-14">
             <h1 className="text-4xl font-inter text-gray-600 dark:text-white font-bold tracking-normal leading-none">
-              {type}
+              {t(`filteredProducts.type.${type}`)}
             </h1>
             <div className="flex items-center justify-between py-8 sm:justify-normal sm:gap-y-2">
               <div className="flex items-center sm:flex-wrap sm:gap-y-2 ">
@@ -61,7 +64,7 @@ const FilteredProducts = () => {
                       className="text-black dark:text-white dark:border-white dark:hover:bg-gray-700 hover:bg-gray-300 duration-300 ease-in-out mr-4"
                       onClick={() => dispatch(filterGender(item))}
                     >
-                      {item}
+                      {t(`filteredProducts.filterButtons.button${index}`)}
                     </Button>
                   </div>
                 ))}
@@ -73,7 +76,7 @@ const FilteredProducts = () => {
                   className="text-black  dark:text-white dark:border-white dark:hover:bg-gray-700 hover:bg-gray-300 duration-300 ease-in-out mr-4"
                   onClick={() => dispatch(sortByPrice())}
                 >
-                  Price: High
+                  {t(`filteredProducts.filterButtons.button2`)}
                 </Button>
                 <Menu>
                   <MenuHandler>
@@ -84,7 +87,7 @@ const FilteredProducts = () => {
                       ripple={true}
                       className="text-black dark:text-white dark:border-white dark:hover:bg-gray-700 hover:bg-gray-300 duration-300 ease-in-out mr-4"
                     >
-                      Select Color
+                      {t(`filteredProducts.filterButtons.button3.text`)}
                     </Button>
                   </MenuHandler>
                   <MenuList>
@@ -94,7 +97,9 @@ const FilteredProducts = () => {
                         key={index}
                         onClick={() => dispatch(filterByColor(item))}
                       >
-                        {item}
+                        {t(
+                          `filteredProducts.filterButtons.button3.color${index}`
+                        )}
                       </MenuItem>
                     ))}
                   </MenuList>
@@ -109,7 +114,7 @@ const FilteredProducts = () => {
                       ripple={true}
                       className="text-black dark:text-white dark:border-white dark:hover:bg-gray-700 hover:bg-gray-300 duration-300 ease-in-out mr-4"
                     >
-                      Select Size
+                      {t(`filteredProducts.filterButtons.button4.text`)}
                     </Button>
                   </MenuHandler>
                   <MenuList>
@@ -131,7 +136,7 @@ const FilteredProducts = () => {
                   className="text-black dark:text-white dark:border-white dark:hover:bg-gray-700 hover:bg-gray-300 duration-300 ease-in-out mr-4 hidden sm:inline-block"
                   onClick={() => dispatch(filterProducts(type))}
                 >
-                  Clear Filter
+                  {t(`filteredProducts.filterButtons.button5`)}
                 </Button>
               </div>
               <div className="pr-14 sm:hidden">
@@ -143,7 +148,7 @@ const FilteredProducts = () => {
                   className="text-black dark:text-white dark:border-white dark:hover:bg-gray-700 hover:bg-gray-300 duration-300 ease-in-out mr-4"
                   onClick={() => dispatch(filterProducts(type))}
                 >
-                  Clear Filter
+                  {t(`filteredProducts.filterButtons.button5`)}
                 </Button>
               </div>
             </div>
