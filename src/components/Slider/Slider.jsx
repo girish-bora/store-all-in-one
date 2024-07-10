@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useTransition } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { nextSlide, prevSlide, dotSlide } from "../../store/slices/sliderSlice";
 import { sliderData } from "../../assets/data/dummyData";
+import { useTranslation } from "react-i18next";
 
 const Slider = () => {
+  const { t } = useTranslation();
+
   const slideIndex = useSelector((state) => state.slider.value);
   const dispatch = useDispatch();
 
@@ -24,15 +27,15 @@ const Slider = () => {
       <div className="bg-black p-4 w-full flex  justify-around">
         <div className="text-white font-inter text-base font-medium tracking-normal leading-none text-center ">
           {" "}
-          50% OFF
+          {t("slider.topBar.discount")}
         </div>
         <div className="text-white font-inter text-base font-medium tracking-normal leading-none text-center ">
           {" "}
-          Free Shipping And Returns
+          {t("slider.topBar.shipping")}
         </div>
         <div className="text-white font-inter text-base font-medium tracking-normal leading-none text-center ">
           {" "}
-          Different Payment Methods
+          {t("slider.topBar.payment")}
         </div>
       </div>
       <div>
@@ -47,12 +50,17 @@ const Slider = () => {
           >
             <div>
               {parseInt(item.id) === slideIndex && (
-                <img className="h-[850px] w-full sm:h-[400px]" src={item.img} alt="shoes" />
+                <img
+                  className="h-[850px] w-full sm:h-[400px]"
+                  src={item.img}
+                  alt="shoes"
+                />
               )}
             </div>
             <div className="absolute top-44 sm:top-4 mx-auto inset-x-1/4">
               <p className="text-white text-4xl sm:text-xl font-inter font-bald tracking-normal leading-none">
-                {parseInt(item.id) === slideIndex && item.text}
+                {parseInt(item.id) === slideIndex &&
+                  t("slider.body.item" + item.id)}
               </p>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useTransition } from "react";
 import {
   Card,
   CardHeader,
@@ -11,8 +11,11 @@ import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 
 import { singleProduct } from "../../store/slices/productsSlice";
+import { useTranslation } from "react-i18next";
 
 const ProductCard = ({ id, name, price, text, colors, img }) => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const { type } = useParams();
 
@@ -31,9 +34,9 @@ const ProductCard = ({ id, name, price, text, colors, img }) => {
         </CardHeader>
         <CardBody>
           <Typography variant="h5" className="dark:text-white mb-2">
-            {name}
+            {t(`data.storeData.${id}.name`)}
           </Typography>
-          <Typography>{text}</Typography>
+          <Typography>{t(`data.storeData.${id}.text`)}</Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small" className="dark:text-white">

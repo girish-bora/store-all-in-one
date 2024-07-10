@@ -3,8 +3,11 @@ import React from "react";
 import logo from "../../assets/images/logo.png";
 import logoDark from "../../assets/images/logodark.png";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const year = new Date().getFullYear();
 
   const darkMode = useSelector((state) => state.theme.darkMode);
@@ -20,7 +23,7 @@ const Footer = () => {
         </div>
         <div>
           <p className="text-black dark:text-white text-sm font-inter no-underline normal-case">
-            Copyright &copy; {year} page by iniT.
+            {t("footer.copy")}
           </p>
         </div>
       </div>

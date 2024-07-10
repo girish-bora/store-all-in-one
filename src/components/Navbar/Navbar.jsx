@@ -7,8 +7,12 @@ import { logout } from "../../store/slices/authSlice";
 import { Avatar, Tooltip, Button } from "@material-tailwind/react";
 import { toggleTheme } from "../../store/slices/themeSlice";
 import { Link } from "react-router-dom";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.user.user);
@@ -41,8 +45,18 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-black p-4 w-full flex  justify-around">
-        <button className="text-white font-inter text-base font-medium tracking-normal leading-none text-center">English</button>
-        <button className="text-white font-inter text-base font-medium tracking-normal leading-none text-center">Hindi</button>
+        <button
+          className="text-white font-inter text-base font-medium tracking-normal leading-none text-center border p-2"
+          onClick={() => {i18next.changeLanguage("en"); console.log("en")}}
+        >
+          {t("navbar.language.en")}
+        </button>
+        <button
+          className="text-white font-inter text-base font-medium tracking-normal leading-none text-center border p-2"
+          onClick={() => {i18next.changeLanguage("hi"); console.log("hi")}}
+        >
+          {t("navbar.language.hi")}
+        </button>
       </div>
       <div className="flex justify-around sm:justify-between items-center bg-blue-gray-300 dark:bg-blue-gray-900">
         <Link to="/">
@@ -71,7 +85,7 @@ const Navbar = () => {
               />
             </svg>
             <p className="font-inter text-base font-medium tracking-normal leading-none text-center mr-4 cursor-pointer dark:text-white">
-              Wishlist
+              {t("navbar.wishlist")}
             </p>
           </div>
           <div
@@ -100,7 +114,7 @@ const Navbar = () => {
             )}
 
             <p className="font-inter text-base font-medium tracking-normal leading-none text-center dark:text-white">
-              Shopping Bag
+              {t("navbar.shoppingBag")}
             </p>
             <div>
               {open && <Cart openModal={open} setOpen={setOpen}></Cart>}
@@ -113,7 +127,8 @@ const Navbar = () => {
             <div onClick={logoutHandler}>
               <Tooltip content="Sign Out" placement="bottom">
                 <p className="font-inter text-base font-medium tracking-normal leading-none dark:text-white">
-                  Hi {name.charAt(0).toUpperCase() + name.slice(1)}
+                  {t("navbar.greeting")}{" "}
+                  {name.charAt(0).toUpperCase() + name.slice(1)}
                 </p>
               </Tooltip>
             </div>
@@ -137,7 +152,7 @@ const Navbar = () => {
                 </svg>
 
                 <p className="font-inter text-base font-medium tracking-normal leading-none text-center text-white">
-                  Dark
+                  {t("navbar.darkMode")}
                 </p>
               </div>
             ) : (
@@ -157,7 +172,7 @@ const Navbar = () => {
                   />
                 </svg>
                 <p className="font-inter text-base font-medium tracking-normal leading-none text-center">
-                  Light
+                  {t("navbar.lightMode")}
                 </p>
               </div>
             )}
@@ -203,7 +218,7 @@ const Navbar = () => {
                 />
               </svg>
               <p className="font-inter text-base font-medium tracking-normal leading-none text-center cursor-pointer dark:text-white">
-                Wishlist
+                {t("navbar.wishlist")}
               </p>
             </div>
             <div
@@ -232,7 +247,7 @@ const Navbar = () => {
               )}
 
               <p className="font-inter text-base font-medium tracking-normal leading-none text-center dark:text-white pt-2">
-                Shopping Bag
+                {t("navbar.shoppingBag")}
               </p>
               <div>
                 {open && <Cart openModal={open} setOpen={setOpen}></Cart>}
@@ -243,9 +258,10 @@ const Navbar = () => {
                 <Avatar src={image} alt="avatar" size="sm" className="mr-2" />
               )}
               <div onClick={logoutHandler}>
-                <Tooltip content="Sign Out" placement="bottom">
+                <Tooltip content={t("navbar.signOut")} placement="bottom">
                   <p className="font-inter text-base font-medium tracking-normal leading-none dark:text-white">
-                    Hi {name.charAt(0).toUpperCase() + name.slice(1)}
+                    {t("navbar.greeting")}{" "}
+                    {name.charAt(0).toUpperCase() + name.slice(1)}
                   </p>
                 </Tooltip>
               </div>
@@ -269,7 +285,7 @@ const Navbar = () => {
                   </svg>
 
                   <p className="font-inter text-base font-medium tracking-normal leading-none text-center text-white">
-                    Dark
+                    {t("navbar.darkMode")}
                   </p>
                 </div>
               ) : (
@@ -289,7 +305,7 @@ const Navbar = () => {
                     />
                   </svg>
                   <p className="font-inter text-base font-medium tracking-normal leading-none text-center">
-                    Light
+                    {t("navbar.lightMode")}
                   </p>
                 </div>
               )}
